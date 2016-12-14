@@ -12,6 +12,12 @@ func (c *Context) Respond(status int, v interface{}) {
 	}
 }
 
+func (c *Context) NotImpl() {
+	c.Respond(http.StatusInternalServerError, map[string]string{
+		"message": "Not implemented yet",
+	})
+}
+
 func (c *Context) JustOK() {
 	c.Respond(http.StatusOK, nil)
 }
