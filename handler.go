@@ -2,20 +2,18 @@ package kiss
 
 import "net/http"
 
-type HandlerFunc func(*Context)
+type handlerFunc func(*Context)
 
-type Handler struct {
-	Handler HandlerFunc
+type handler struct {
+	Handler handlerFunc
+	Logger  *logger
 }
 
-func NewHandler(hf HandlerFunc) *Handler {
-	return &Handler{hf}
-}
-
-func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	c := Context{
 		ResponseWriter: w,
 		Request:        r,
+		Logger:         h.Logger,
 	}
 
 	h.Handler(&c)

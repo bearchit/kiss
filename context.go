@@ -5,15 +5,17 @@ import (
 
 	"strconv"
 
+	"encoding/json"
+
 	"github.com/gorilla/mux"
 	"github.com/gorilla/schema"
 	"github.com/unrolled/render"
-	"gopkg.in/square/go-jose.v1/json"
 )
 
 type Context struct {
 	ResponseWriter http.ResponseWriter
 	Request        *http.Request
+	Logger         *logger
 }
 
 func (c *Context) URLParams() map[string]string {
