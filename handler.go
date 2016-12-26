@@ -1,12 +1,16 @@
 package kiss
 
-import "net/http"
+import (
+	"net/http"
+
+	"github.com/bearchit/kiss/log"
+)
 
 type handlerFunc func(*Context)
 
 type handler struct {
 	Handler handlerFunc
-	Logger  *logger
+	Logger  *log.Logger
 }
 
 func (h *handler) ServeHTTP(w http.ResponseWriter, r *http.Request) {

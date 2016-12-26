@@ -2,19 +2,17 @@ package kiss
 
 import "github.com/bearchit/kiss/log"
 
-type logger log.Logger
-
 type Kiss struct {
-	Logger *logger
+	Logger *log.Logger
 }
 
 type Config struct {
-	Logger *logger
+	Logger *log.Logger
 }
 
 func New() *Kiss {
 	return &Kiss{
-		Logger: (*logger)(log.New()),
+		Logger: log.New(),
 	}
 }
 

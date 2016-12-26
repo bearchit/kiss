@@ -7,6 +7,7 @@ import (
 
 	"encoding/json"
 
+	"github.com/bearchit/kiss/log"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/schema"
 	"github.com/unrolled/render"
@@ -15,7 +16,7 @@ import (
 type Context struct {
 	ResponseWriter http.ResponseWriter
 	Request        *http.Request
-	Logger         *logger
+	Logger         *log.Logger
 }
 
 func (c *Context) URLParams() map[string]string {
