@@ -1,6 +1,6 @@
 package kiss
 
-import "github.com/bearchit/kiss/log"
+import "github.com/mangoplate/kiss/log"
 
 type Kiss struct {
 	Logger *log.Logger

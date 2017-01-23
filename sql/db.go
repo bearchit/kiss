@@ -5,7 +5,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"github.com/bearchit/kiss/log"
+	"github.com/mangoplate/kiss/log"
 )
 
 type DB struct {

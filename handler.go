@@ -3,7 +3,7 @@ package kiss
 import (
 	"net/http"
 
-	"github.com/bearchit/kiss/log"
+	"github.com/mangoplate/kiss/log"
 )
 
 type handlerFunc func(*Context)

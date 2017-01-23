@@ -3,7 +3,7 @@ package log_test
 import (
 	"testing"
 
-	"github.com/bearchit/kiss/log"
+	"github.com/mangoplate/kiss/log"
 	"github.com/stretchr/testify/assert"
 )
 

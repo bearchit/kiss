@@ -7,9 +7,9 @@ import (
 
 	"encoding/json"
 
-	"github.com/bearchit/kiss/log"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/schema"
+	"github.com/mangoplate/kiss/log"
 	"github.com/unrolled/render"
 )
 
