@@ -5,8 +5,8 @@ import (
 
 	"database/sql"
 
-	"github.com/Masterminds/squirrel"
 	"github.com/Sirupsen/logrus"
+	"gopkg.in/Masterminds/squirrel.v1"
 )
 
 type queryFn func(interface{}, string, ...interface{}) error
